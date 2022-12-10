@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Iconic | Jewelry to match your every mood</title>
+</head>
+<body>
+    <div class="hero-bg">
+        <header>
+            <a class="logo" href="#"><img src="images/logo.png" alt="Iconic logo"></a>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <img class="close-menu" id="close-menu" src="images/exit.svg" alt="Close menu button">
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Products</li></a>
+                    <a href="#"><li>About Us</li></a>
+                    <a href="#"><li>Contact Us</li></a>
+                </ul>
+            </nav>
+            <img class="open-menu" id="open-menu" src="images/menu.svg" alt="Open menu button">
+        </header>
+        <section class="head-section">
+            <h1>Jewelry</h1>
+            <h2>to match your every mood</h2>
+        </section>
+        <section class="jewelry-section">
+            <div class="sub-sec gold">
+                <div class="container">
+                    <h3>The Royal Gold</h3>
+                    <button class="shop-now-btn">Shop now</button>
+                </div>
+            </div>
+            <div class="sub-sec silver">
+                <div class="container">
+                    <h3>The Pure Silver</h3>
+                    <button class="shop-now-btn">Shop now</button>
+                </div>
+            </div>
+            <div class="sub-sec platinum">
+                <div class="container">
+                    <h3>The Elegant Platinum</h3>
+                    <button class="shop-now-btn">Shop now</button>
+                </div>
+            </div>
+            <div class="sub-sec diamond">
+                <div class="container">
+                    <h3>The Ravishing Diamond</h3>
+                    <button class="shop-now-btn">Shop now</button>
+                </div>
+            </div>
+            <div class="sub-sec pearl">
+                <div class="container">
+                    <h3>The Curious Pearl</h3>
+                    <button class="shop-now-btn">Shop now</button>
+                </div>
+            </div>
+            <div class="sub-sec ruby">
+                <div class="container">
+                    <h3>The Playful Ruby</h3>
+                    <button class="shop-now-btn">Shop now</button>
+                </div>
+            </div>
+            <button class="shop-more">Shop more metals</button>
+            <button class="shop-more">Shop more stones</button>
+        </section>
+        <section class="mailing-list-section">
+            <h2>Hey Dazzler!!</h2>
+            <p>Sign up to our mailling list to receive updates about our latest collection, sale and much more!!</p>
+            <form action="">
+                <input class="mail" type="email" name="email" id="email" placeholder="Enter your email ID">
+                <input class="submit-btn" type="button" value="Submit">
+            </form>
+        </section>
+        <footer>
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Iconic logo">
+            </div>
+            <div class="footer-links">
+                <div class="links explore">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="links follow">
+                    <h3>Follow</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="links legal">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms Of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        let navbar=document.querySelector(".navbar");
+        let openMenu=document.querySelector(".open-menu");
+        let closeMenu=document.querySelector(".close-menu");
+        openMenu.addEventListener('click',()=>{
+            navbar.classList.add("menu");
+        });
+        closeMenu.addEventListener('click',()=>{
+            navbar.classList.remove("menu");
+        });
+    </script>
+</body>
+</html>

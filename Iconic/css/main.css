@@ -1,0 +1,788 @@
+:root {
+  --primary: #000000;
+  --secondary: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: lighter;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero-bg {
+  background: url("../images/Bg1.jpg");
+  background-size: cover;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  width: 25%;
+  padding: 3%;
+  max-width: 150px;
+}
+
+header .logo img {
+  width: 100%;
+}
+
+header nav {
+  display: none;
+  background-color: var(--secondary);
+  color: var(--primary);
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  z-index: 100;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 7em;
+}
+
+header nav ul a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+header nav ul a li {
+  padding: 1.4em;
+  font-size: 1.2em;
+}
+
+header nav ul a li:hover {
+  font-weight: bold;
+}
+
+header nav ul img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 1.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2em;
+  cursor: pointer;
+}
+
+header .open-menu {
+  width: 5%;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  padding-right: 10%;
+  cursor: pointer;
+}
+
+header .menu {
+  display: block;
+}
+
+.head-section h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+.head-section h2 {
+  font-size: 1em;
+  text-align: center;
+  margin-top: 0.2em;
+  margin-bottom: 5em;
+}
+
+.jewelry-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 2em;
+}
+
+.jewelry-section .gold {
+  background: url("../images/gold.webp") no-repeat;
+  background-size: 90%;
+  background-position: 0% center;
+}
+
+.jewelry-section .silver {
+  background: url("../images/silver.webp") no-repeat;
+  background-position: 100% 30%;
+  background-size: 120%;
+}
+
+.jewelry-section .platinum {
+  background: url("../images/platinum.webp") no-repeat;
+  background-position: -6em 40%;
+  background-size: 110%;
+}
+
+.jewelry-section .diamond {
+  background: url("../images/diamond.webp") no-repeat;
+  background-position: -4em 60%;
+  background-size: 90%;
+}
+
+.jewelry-section .pearl {
+  display: none;
+  background: url("../images/pearl.webp") no-repeat;
+  background-position: -3em 85%;
+  background-size: 100%;
+}
+
+.jewelry-section .ruby {
+  display: none;
+  background: url("../images/ruby.webp") no-repeat;
+  background-position: -1.5em 40%;
+  background-size: 80%;
+}
+
+.jewelry-section .sub-sec {
+  opacity: 80%;
+  background-color: black;
+  margin: 0.25em 0.5em;
+  height: 7.5em;
+  cursor: pointer;
+}
+
+.jewelry-section .sub-sec .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  margin-right: 0.5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.jewelry-section .sub-sec .container h3 {
+  margin: 0;
+  font-size: 1em;
+  text-align: right;
+}
+
+.jewelry-section .sub-sec .container .shop-now-btn {
+  width: 70px;
+  padding: 0.4em;
+  font-size: 0.6em;
+  margin-top: 1em;
+  background-color: #383838;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #1a1a1a;
+}
+
+.jewelry-section .sub-sec .container .shop-now-btn:hover {
+  background-color: #222222;
+}
+
+.jewelry-section .sub-sec .container .shop-now-btn:active {
+  background-color: #bdbdbd;
+  color: #000000;
+}
+
+.jewelry-section .sub-sec:hover {
+  opacity: 100%;
+  margin: 0.12em 0.25em;
+}
+
+.jewelry-section .shop-more {
+  display: none;
+}
+
+.mailing-list-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  margin: 0.5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+  padding: 2em;
+}
+
+.mailing-list-section h2 {
+  font-size: 1.5rem;
+  padding: 0.5em 0;
+}
+
+.mailing-list-section p {
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 0.5em 1em 1em 1em;
+  line-height: 1.5em;
+}
+
+.mailing-list-section form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mailing-list-section form .mail {
+  width: 90%;
+  margin: 1em;
+  padding: 0.2em;
+  background-color: #383838;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.6em;
+}
+
+.mailing-list-section form .submit-btn {
+  font-family: 'Raleway', sans-serif;
+  width: 20%;
+  padding: 0.4em;
+  font-size: 0.6em;
+  background-color: #383838;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #1a1a1a;
+  margin: 0.5em 1em 1em 1em;
+}
+
+.mailing-list-section form .submit-btn:hover {
+  background-color: #222222;
+}
+
+.mailing-list-section form .submit-btn:active {
+  background-color: #bdbdbd;
+  color: #000000;
+}
+
+footer {
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-logo {
+  display: none;
+  width: 25%;
+  max-width: 150px;
+  margin: 1em 0.5em 1em 1em;
+}
+
+footer .footer-logo img {
+  width: 100%;
+}
+
+footer .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-links .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1em;
+}
+
+footer .footer-links .links h3 {
+  color: #494949;
+  font-size: 0.8em;
+}
+
+footer .footer-links .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer-links .links ul li {
+  font-size: 0.4em;
+  padding: 0.5em;
+}
+
+footer .footer-links .links ul li a {
+  color: var(--secondary);
+}
+
+footer .footer-links .links ul li a:hover {
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 400px) {
+  .head-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 0;
+    margin-top: 1.5em;
+  }
+  .head-section h2 {
+    font-size: 1.2em;
+    margin-top: 0.2em;
+    margin-bottom: 7em;
+  }
+  .jewelry-section .sub-sec {
+    height: 9.5em;
+  }
+  footer .footer-logo {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .head-section h1 {
+    font-size: 4em;
+    margin-top: 1.7em;
+  }
+  .head-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 8em;
+  }
+  .jewelry-section .sub-sec {
+    height: 11.5em;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .mailing-list-section form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mailing-list-section form .mail {
+    width: 80%;
+    margin: 1em 1em 3em 3em;
+    padding: 0.4em;
+  }
+  .mailing-list-section form .submit-btn {
+    width: 20%;
+    margin: 1em 3em 3em 1em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .logo {
+    padding: 2%;
+  }
+  header nav {
+    display: inline;
+    background: none;
+    position: unset;
+    height: auto;
+    width: auto;
+    z-index: unset;
+    margin-left: 1em;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0;
+    margin-right: 1em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  header nav ul a {
+    text-decoration: none;
+    color: var(--secondary);
+    margin: 0.5em 1.5em;
+  }
+  header nav ul a li {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0.5em;
+    font-size: 0.95em;
+  }
+  header nav ul a li:hover {
+    font-weight: bolder;
+  }
+  header nav ul img {
+    display: none;
+  }
+  header .open-menu {
+    display: none;
+  }
+  .head-section h1 {
+    font-size: 4.5em;
+    margin-top: 2.5em;
+  }
+  .head-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 9em;
+  }
+  .jewelry-section .sub-sec {
+    height: 13.5em;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  header nav ul {
+    margin-right: 1em;
+  }
+  header nav ul a li {
+    font-size: 1.09em;
+  }
+  .head-section h1 {
+    font-size: 6em;
+  }
+  .head-section h2 {
+    font-size: 2em;
+    margin-bottom: 10em;
+  }
+  .jewelry-section .sub-sec {
+    height: 15.5em;
+  }
+  footer .footer-links .links {
+    margin: 1em 3em;
+  }
+  footer .footer-links .links h3 {
+    font-size: 1em;
+  }
+  footer .footer-links .links ul li {
+    width: 100%;
+    font-size: 0.7em;
+    padding: 0.5em;
+    padding-left: 0;
+  }
+  .mailing-list-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 5em;
+  }
+  .mailing-list-section h2 {
+    font-size: 3rem;
+  }
+  .mailing-list-section p {
+    font-size: 1rem;
+  }
+  .mailing-list-section form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mailing-list-section form .mail {
+    width: 70%;
+    margin: 1em;
+    font-size: 1rem;
+  }
+  .mailing-list-section form .submit-btn {
+    width: 20%;
+    padding: 0.4em;
+    font-size: 1em;
+    margin: 0.5em 1em 1em 1em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .head-section h1 {
+    font-size: 6.5em;
+    margin-top: 1em;
+  }
+  .head-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 5em;
+  }
+  .jewelry-section {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "goldd diamond" "silverr pearl" "platinum ruby";
+    margin-bottom: 2em;
+  }
+  .jewelry-section .gold {
+    background-size: 100%;
+    background-position: 0% 100%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: goldd;
+  }
+  .jewelry-section .silver {
+    background-position: 50% 30%;
+    background-size: 140%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: silverr;
+  }
+  .jewelry-section .platinum {
+    background-position: -14em 50%;
+    background-size: 150%;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: platinum;
+  }
+  .jewelry-section .diamond {
+    background-position: -7em 60%;
+    background-size: 110%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: diamond;
+  }
+  .jewelry-section .pearl {
+    display: block;
+    background-position: -3em 100%;
+    background-size: 110%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: pearl;
+  }
+  .jewelry-section .ruby {
+    display: block;
+    background-position: -5em 30%;
+    background-size: 90%;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ruby;
+  }
+  .jewelry-section .sub-sec {
+    background-color: #000000;
+    margin: 0.25em 0.25em 0.25em 0.5em;
+    height: 20em;
+  }
+  .jewelry-section .sub-sec .container {
+    max-width: 40%;
+    margin-right: 1em;
+  }
+  .jewelry-section .sub-sec .container h3 {
+    font-size: 2em;
+    text-align: right;
+  }
+  .jewelry-section .sub-sec .container .shop-now-btn {
+    width: 100px;
+    padding: 0.4em;
+    font-size: 1em;
+  }
+  .jewelry-section .shop-more {
+    display: block;
+    margin: 2em auto;
+    width: 50%;
+    padding: 0.4em;
+    font-size: 1em;
+    background-color: #383838;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #1a1a1a73;
+  }
+  .jewelry-section .shop-more:hover {
+    background-color: #222222;
+  }
+  .jewelry-section .shop-more:active {
+    background-color: #bdbdbd;
+    color: #000000;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .head-section h1 {
+    font-size: 7em;
+  }
+  .head-section h2 {
+    font-size: 2.5em;
+  }
+  footer .footer-links .links {
+    margin: 1em 5em;
+  }
+  footer .footer-links .links h3 {
+    font-size: 1em;
+  }
+  footer .footer-links .links ul li {
+    width: 100%;
+    font-size: 0.7em;
+    padding: 0.5em;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  header .logo {
+    padding: 1.25%;
+    max-width: 150px;
+  }
+  .mailing-list-section {
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .head-section h1 {
+    font-size: 8em;
+  }
+  .head-section h2 {
+    font-size: 3em;
+  }
+  footer .footer-logo {
+    width: 200px;
+    max-width: unset;
+  }
+  footer .footer-logo img {
+    width: 100%;
+  }
+  footer .footer-links .links {
+    margin: 3em 7em;
+  }
+  footer .footer-links .links h3 {
+    font-size: 1.5em;
+  }
+  footer .footer-links .links ul li {
+    width: 100%;
+    font-size: 0.9em;
+    padding: 0.6em;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  footer .footer-logo {
+    margin: 1em 0.5em 1em 1em;
+  }
+  footer .footer-logo img {
+    width: 100%;
+  }
+  footer .footer-links .links {
+    margin: 3em 7em;
+  }
+  footer .footer-links .links h3 {
+    font-size: 1.5em;
+  }
+  footer .footer-links .links ul li {
+    width: 100%;
+    font-size: 0.9em;
+    padding: 0.7em;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .head-section h1 {
+    font-size: 9em;
+  }
+  .head-section h2 {
+    font-size: 3.5em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
