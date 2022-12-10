@@ -1,0 +1,257 @@
+// ------------------------------Reset------------------------------
+body{
+    padding:0;
+    margin:1.5em;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+// ------------------------------Variables------------------------------
+:root{
+    --primary-col: #CC101F;
+
+}
+// ------------------------------Header------------------------------
+header{
+    display:flex;
+    justify-content: space-between;
+    .logo{
+        color:#ffffff;
+        font-weight: bold;
+    }
+    nav{
+        position:fixed;
+        right:0;
+        top:0;
+        background:#ffffff;
+        height:100vh;
+        width:50%;
+        z-index: 5;
+        text-transform: uppercase;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        ul{
+            list-style: none;
+            padding:0;
+            margin-top:8em;
+            a{
+                color: #000000;
+                display:block;
+                padding:0.75em 2em;
+                width:100%;
+                &:hover{
+                    background-color: #b9b9b9;
+
+                }
+            }
+        }
+        .close-menu{
+            float: right;
+            margin:1.5em;
+            width:1.8em;
+            cursor:pointer;
+        }
+    }
+    .open-menu{
+        filter: invert(100%);
+        width:1.5em;
+        margin-top: -0,6em;
+        cursor:pointer;
+        display:block;
+    }
+}
+// ------------------------------Hero section------------------------------
+.hero-img{
+    position:absolute;
+    top:0;
+    left:0;
+    background: url('../images/red\ shoe.jpg');
+    background-size: cover;
+    background-position: 20% 20%;
+    width:100%;
+    height:100vh;
+    z-index: -1;
+    animation: intro 2s forwards;
+    overflow:hidden;
+}
+.hero-section{
+    color:#ffffff;
+    height:90vh;
+    h1{
+        font-size: 3rem;
+        margin-top: 2em;
+        line-height:3.3rem;
+        animation: move-down 1s ease-in-out forwards;
+    }
+    .subhead{
+        font-size: 1.4rem;
+        animation: move-down 1s ease-in-out forwards;
+    }
+    img{
+        filter: invert(100%);
+        position:absolute;
+        bottom: 2em;
+        width:1em;
+        animation: arrow 1s alternate-reverse infinite;
+    }
+}
+
+// ------------------------------More info section------------------------------
+.more-info
+{
+    img{
+        width:100%;
+        height:15em;
+        object-fit: cover;
+    }
+    .title{
+        font-weight: bold;
+        font-size: 2rem;
+        color:var(--primary-col);
+        margin-bottom: 0.1em;
+
+    }
+    .description{
+        line-height: 1.5rem;
+        margin-top: 0.1em;
+    }
+    .content{
+        margin:auto;
+    }
+}
+
+// ------------------------------Javascript classes------------------------------
+.open-nav{
+    transform: translateX(0%);
+}
+
+// ------------------------------Media Queries------------------------------
+@media only screen and (min-width: 680px){
+    body{
+        margin:1.5em 5em;
+    }
+}
+@media only screen and (min-width: 920px){
+    header{
+        .open-menu{
+            display:none;
+        }
+        .logo{
+            color:#000000;
+            span{
+                color: var(--primary-col);
+            }
+        }
+        nav{
+            transform: translateX(0%);
+            position:unset;
+            display:block;
+            width:auto;
+            height:auto;
+            background: none;
+            ul{
+                display:flex;
+                margin:0;
+                a{
+                    color:#ffffff;
+                    padding:0.5em 1.5em;
+                    font-size: 0.9em;
+                    font-weight: bold;
+                    &:hover{
+                        background:none;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .close-menu{
+                display: none;
+            }
+        }
+    }
+    .hero-img{
+        left:unset;
+        right:0;
+        width:50%;
+        height:42em;
+    }
+    .hero-section{
+        color:#000000;
+        height:auto;
+        width:40%;
+        margin-bottom: 25em;
+        img{
+            position:absolute;
+            filter: invert(0%);
+            
+        }
+    }
+    .more-info{
+        // margin-top: 18em;
+        .feature{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 3em;
+            margin-bottom:8em;
+            img{
+                width:25em;
+            }
+            .title{
+                margin-bottom: 1em;
+            }
+            .content{
+                text-align: right;
+                width: 25em;
+            }
+        }
+        .feature.invert{
+            grid-template-areas: "left right";
+            img{
+                grid-area: left;
+            }
+            .content{
+                grid-area: right;
+                text-align: left;
+                width:25em;
+                justify-self: left;
+                margin-left: -2em;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px){
+    .wrapper{
+        width:1200px;
+        margin:auto;
+    }
+    .feature{
+        gap:0;
+    }
+}
+
+// ------------------------------Key frames------------------------------
+@keyframes intro{
+    from{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes arrow{
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes move-down {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}

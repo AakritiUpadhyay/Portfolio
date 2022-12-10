@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeGrand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="hero-img"></div>
+    <div class="wrapper">
+        <header>
+            <a href="#" class="logo">Shoe<span>Grand</span></a>
+            <nav>
+                <img class="close-menu" src="images/Close menu.png" alt="Close menu button">
+                <ul>
+                    <li><a href="#" class="current">Home</a></li>
+                    <li><a href="#">Sneakers</a></li>
+                    <li><a href="#">Players</a></li>
+                </ul>
+            </nav>
+            <img class="open-menu" src="images/Open menu.svg" alt="Open menu button"> 
+        </header>
+        <section class="hero-section">
+            <h1>Regain your confidance on court.</h1>
+            <p class="subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, facere!</p>
+            <img class="down-arrow" src="images/arrow.png" alt="An arrow pointing downwards">
+        </section>
+        <section class="more-info">
+            <div class="feature">
+                <div class="content">
+                    <p class="title">Lightweight</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam, quis odit optio animi amet!</p>
+                </div>
+                <img src="images/lightweight.jpg" alt="Image of shoes">
+            </div>
+            <div class="feature invert">
+                <div class="content">
+                    <p class="title">Flexible</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam, quis odit optio animi amet!</p>
+                </div>
+                <img src="images/flexible.jpg" alt="Image of shoes">
+            </div>
+            <div class="feature">
+                <div class="content">
+                    <p class="title">Durable</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam, quis odit optio animi amet!</p>
+                </div>
+                <img src="images/durable.jpg" alt="Image of shoes">
+            </div>
+        </section>
+    </div>
+    <script>
+        const menu=document.querySelector('.open-menu')
+        const close=document.querySelector('.close-menu')
+        const nav=document.querySelector('nav')
+
+        menu.addEventListener('click', ()=>{
+            nav.classList.add('open-nav');
+        })
+        close.addEventListener('click', ()=>{
+            nav.classList.remove('open-nav');
+        })
+    </script>
+</body>
+</html>

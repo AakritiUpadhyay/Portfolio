@@ -1,0 +1,325 @@
+body {
+  padding: 0;
+  margin: 1.5em;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+:root {
+  --primary-col: #CC101F;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+header nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #ffffff;
+  height: 100vh;
+  width: 50%;
+  z-index: 5;
+  text-transform: uppercase;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8em;
+}
+
+header nav ul a {
+  color: #000000;
+  display: block;
+  padding: 0.75em 2em;
+  width: 100%;
+}
+
+header nav ul a:hover {
+  background-color: #b9b9b9;
+}
+
+header nav .close-menu {
+  float: right;
+  margin: 1.5em;
+  width: 1.8em;
+  cursor: pointer;
+}
+
+header .open-menu {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 1.5em;
+  margin-top: -0,6em;
+  cursor: pointer;
+  display: block;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/red shoe.jpg");
+  background-size: cover;
+  background-position: 20% 20%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  -webkit-animation: intro 2s forwards;
+          animation: intro 2s forwards;
+  overflow: hidden;
+}
+
+.hero-section {
+  color: #ffffff;
+  height: 90vh;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-top: 2em;
+  line-height: 3.3rem;
+  -webkit-animation: move-down 1s ease-in-out forwards;
+          animation: move-down 1s ease-in-out forwards;
+}
+
+.hero-section .subhead {
+  font-size: 1.4rem;
+  -webkit-animation: move-down 1s ease-in-out forwards;
+          animation: move-down 1s ease-in-out forwards;
+}
+
+.hero-section img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  position: absolute;
+  bottom: 2em;
+  width: 1em;
+  animation: arrow 1s alternate-reverse infinite;
+}
+
+.more-info img {
+  width: 100%;
+  height: 15em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.more-info .title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--primary-col);
+  margin-bottom: 0.1em;
+}
+
+.more-info .description {
+  line-height: 1.5rem;
+  margin-top: 0.1em;
+}
+
+.more-info .content {
+  margin: auto;
+}
+
+.open-nav {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  header .open-menu {
+    display: none;
+  }
+  header .logo {
+    color: #000000;
+  }
+  header .logo span {
+    color: var(--primary-col);
+  }
+  header nav {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  header nav ul a {
+    color: #ffffff;
+    padding: 0.5em 1.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  header nav ul a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+  header nav .close-menu {
+    display: none;
+  }
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 42em;
+  }
+  .hero-section {
+    color: #000000;
+    height: auto;
+    width: 40%;
+    margin-bottom: 25em;
+  }
+  .hero-section img {
+    position: absolute;
+    -webkit-filter: invert(0%);
+            filter: invert(0%);
+  }
+  .more-info .feature {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+    margin-bottom: 8em;
+  }
+  .more-info .feature img {
+    width: 25em;
+  }
+  .more-info .feature .title {
+    margin-bottom: 1em;
+  }
+  .more-info .feature .content {
+    text-align: right;
+    width: 25em;
+  }
+  .more-info .feature.invert {
+        grid-template-areas: "left right";
+  }
+  .more-info .feature.invert img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+  .more-info .feature.invert .content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: right;
+    text-align: left;
+    width: 25em;
+    -ms-grid-column-align: left;
+        justify-self: left;
+    margin-left: -2em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: auto;
+  }
+  .feature {
+    gap: 0;
+  }
+}
+
+@-webkit-keyframes intro {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes intro {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes arrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes arrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes move-down {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes move-down {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=main.css.map */
