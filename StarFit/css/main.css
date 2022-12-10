@@ -1,0 +1,755 @@
+:root {
+  --primary: #DFE12C;
+  --secondary: #F2F2F2;
+  --font: 'Merriweather Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  background-color: var(--secondary);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .logo {
+  padding: 0.5em;
+}
+
+.navbar .logo img {
+  width: 5em;
+}
+
+.navbar .open-menu {
+  width: 1.5em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.navbar nav {
+  position: fixed;
+  background: var(--primary);
+  height: 100vh;
+  width: 50%;
+  right: 0;
+  z-index: 100;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.navbar nav .exit-menu {
+  display: block;
+  margin: 1em;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 1em;
+  float: right;
+  cursor: pointer;
+}
+
+.navbar nav .exit-menu:active {
+  -webkit-filter: invert(0%);
+          filter: invert(0%);
+}
+
+.navbar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5em;
+}
+
+.navbar nav ul li {
+  padding: 1em;
+}
+
+.navbar nav ul li a {
+  color: black;
+}
+
+.navbar nav ul li a:active {
+  color: white;
+}
+
+.navbar nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar nav ul .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 2em;
+}
+
+.navbar nav ul .icons img {
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.navbar nav ul .icons img:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar nav ul .icons .cart {
+  width: 2em;
+}
+
+.navbar nav ul .icons .search {
+  width: 1.6em;
+}
+
+.navbar .menu {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.desk {
+  display: none;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.hero-section::before {
+  content: ' ';
+  position: absolute;
+  margin: 5% auto;
+  z-index: -1;
+  width: 100%;
+  height: 83%;
+  background-color: var(--primary);
+}
+
+.hero-section .container .fashion {
+  width: 40%;
+  position: absolute;
+  top: 0.3em;
+}
+
+.hero-section .container .mob {
+  width: 95%;
+  display: block;
+  margin: 5em auto;
+}
+
+.hero-section .container .desk {
+  display: none;
+}
+
+.hero-section .container .trends {
+  width: 40%;
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+
+.categories-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4em;
+}
+
+.categories-section .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0em 2em 3em 2em;
+}
+
+.categories-section .item .sub-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.categories-section .item .sub-items img {
+  width: 5em;
+  margin-top: 0.2em;
+}
+
+.categories-section .item .sub-items p {
+  font-size: 0.5rem;
+}
+
+.categories-section .item .picture {
+  width: 30px;
+}
+
+.categories-section .left .sub-items {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.categories-section .left .sub-items img {
+  margin-left: -0.8em;
+}
+
+.categories-section .left .sub-items p {
+  padding: 0.5em;
+}
+
+.categories-section .left .sub-items .button {
+  float: left;
+}
+
+.categories-section .right {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.categories-section .right .sub-items {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.categories-section .right .sub-items img {
+  margin-right: -0.8em;
+}
+
+.categories-section .right .sub-items p {
+  text-align: right;
+  padding: 1em 0.5em;
+}
+
+.categories-section .right .sub-items .button {
+  float: right;
+}
+
+.categories-section .button {
+  margin: 0.5em;
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
+  -webkit-box-shadow: 0 0 0 2px var(--primary);
+          box-shadow: 0 0 0 2px var(--primary);
+  text-align: center;
+  padding: 0 0.3em 0.3em 0.3em;
+}
+
+.categories-section .button a {
+  font-size: 0.5rem;
+  color: black;
+}
+
+.categories-section .button a:active {
+  color: var(--primary);
+}
+
+.categories-section .button:hover {
+  background-color: #d5d82c;
+  -webkit-box-shadow: 0 0 0 2px #d5d82c;
+          box-shadow: 0 0 0 2px #d5d82c;
+}
+
+.categories-section .button:active {
+  background-color: var(--secondary);
+  border: 2px solid var(--primary);
+  -webkit-box-shadow: 0 0 0 2px var(--secondary);
+          box-shadow: 0 0 0 2px var(--secondary);
+}
+
+.categories-section .categories-btn {
+  width: 8em;
+  margin: auto;
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
+  -webkit-box-shadow: 0 0 0 2px var(--primary);
+          box-shadow: 0 0 0 2px var(--primary);
+  text-align: center;
+  padding: 0.3em;
+}
+
+.categories-section .categories-btn a {
+  font-size: 0.7rem;
+  color: black;
+}
+
+.categories-section .categories-btn a:active {
+  color: var(--primary);
+}
+
+.categories-section .categories-btn:hover {
+  background-color: #d5d82c;
+  -webkit-box-shadow: 0 0 0 2px #d5d82c;
+          box-shadow: 0 0 0 2px #d5d82c;
+}
+
+.categories-section .categories-btn:active {
+  background-color: var(--secondary);
+  border: 2px solid var(--primary);
+  -webkit-box-shadow: 0 0 0 2px var(--secondary);
+          box-shadow: 0 0 0 2px var(--secondary);
+}
+
+.articles-section {
+  display: none;
+}
+
+.mailling-section {
+  background: url("../images/signup-bg-svg.png") center center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mailling-section img {
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.mailling-section form .mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 2em;
+  border: 1px solid var(--primary);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 15em;
+}
+
+.mailling-section form .mail .text {
+  background-color: unset;
+  border: unset;
+  color: var(--primary);
+  font-size: 0.5rem;
+  width: 100%;
+}
+
+.mailling-section form .mail .text:focus {
+  outline: none;
+}
+
+.mailling-section form .mail .button {
+  background-color: var(--primary);
+  border: none;
+  font-size: 0.6rem;
+  padding: 0.1em 0.5em;
+  margin: 0.15em;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.mailling-section form .mail .button:hover {
+  background-color: #d5d82c;
+}
+
+.mailling-section form .mail .button:active {
+  background-color: #00000000;
+  -webkit-box-shadow: inset 0 0 0 1px var(--primary);
+          box-shadow: inset 0 0 0 1px var(--primary);
+  color: var(--primary);
+}
+
+@media only screen and (min-width: 400px) {
+  .hero-section .container .mob {
+    margin: 7em auto;
+  }
+  .categories-section .item .sub-items img {
+    width: 7em;
+  }
+  .categories-section .item .sub-items p {
+    font-size: 0.7rem;
+  }
+  .categories-section .item .picture {
+    width: 40px;
+  }
+  .categories-section .button a {
+    font-size: 0.7rem;
+  }
+  .categories-section .categories-btn {
+    width: 11em;
+  }
+  .categories-section .categories-btn a {
+    font-size: 0.8rem;
+  }
+  .mailling-section form .mail {
+    width: 17em;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .navbar .logo {
+    padding: 0.7em;
+  }
+  .navbar .logo img {
+    width: 7em;
+  }
+  .categories-section .item {
+    margin: 0 3em 3em 3em;
+  }
+  .mailling-section img {
+    margin-bottom: 2em;
+  }
+  .mailling-section form .mail {
+    width: 24em;
+  }
+  .mailling-section form .mail .text {
+    font-size: 0.7rem;
+  }
+  .mailling-section form .mail .button {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .mob {
+    display: none;
+  }
+  .desk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .desk .open-menu {
+    display: none;
+  }
+  .desk .logo {
+    padding: 0.7em;
+  }
+  .desk .logo img {
+    width: 7em;
+  }
+  .desk nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: unset;
+    background: unset;
+    height: unset;
+    width: unset;
+    right: unset;
+    z-index: unset;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .desk nav .exit-menu {
+    display: none;
+  }
+  .desk nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0em;
+  }
+  .desk nav ul li {
+    padding: 1em;
+  }
+  .desk nav ul li a {
+    color: black;
+  }
+  .desk nav ul li a:active {
+    color: var(--primary);
+  }
+  .desk nav ul li:hover {
+    background-color: unset;
+    font-weight: bold;
+  }
+  .desk .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0em;
+  }
+  .desk .icons img {
+    padding: 0.5em;
+  }
+  .desk .icons img:hover {
+    background-color: unset;
+  }
+  .desk .icons .cart {
+    width: 1.5em;
+    cursor: pointer;
+  }
+  .desk .icons .search {
+    width: 1.3em;
+    cursor: pointer;
+  }
+  .categories-section {
+    margin-bottom: 6em;
+  }
+  .categories-section .item {
+    margin: 0em 5em 3em 5em;
+  }
+  .categories-section .item .sub-items img {
+    width: 9em;
+    margin-top: 0.2em;
+  }
+  .categories-section .item .sub-items p {
+    font-size: 1rem;
+  }
+  .categories-section .item .picture {
+    width: 50px;
+  }
+  .categories-section .left .sub-items img {
+    margin-left: -0.8em;
+  }
+  .categories-section .left .sub-items p {
+    padding: 0.5em;
+  }
+  .categories-section .right .sub-items p {
+    padding: 1em 0.5em;
+  }
+  .categories-section .button {
+    padding: 0.4em;
+  }
+  .categories-section .button a {
+    font-size: 1rem;
+  }
+  .categories-section .categories-btn {
+    margin-top: 2em;
+    width: 15em;
+    padding: 0.5em;
+  }
+  .categories-section .categories-btn a {
+    font-size: 1.2rem;
+  }
+  .mailling-section form .mail {
+    width: 27em;
+  }
+  .mailling-section form .mail .text {
+    font-size: 0.7rem;
+  }
+  .mailling-section form .mail .button {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .categories-section .item {
+    margin: 0em 6em 3em 6em;
+  }
+  .articles-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2em 4em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .articles-section .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1em;
+    background-color: #a3a3a3;
+  }
+  .articles-section .item img {
+    width: 5em;
+    height: 100%;
+  }
+  .articles-section .item .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0.5em;
+    font-size: 0.7rem;
+  }
+  .articles-section .item .left p {
+    padding: 0.5em;
+  }
+  .articles-section .item .left a {
+    padding: 0.5em;
+  }
+  .articles-section .item .left a:hover {
+    text-decoration: underline;
+  }
+  .mailling-section form .mail {
+    width: 33em;
+  }
+  .mailling-section form .mail .text {
+    font-size: 0.8rem;
+  }
+  .mailling-section form .mail .button {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .categories-section .item {
+    margin: 0em 6.5em 3em 6.5em;
+  }
+  .mailling-section form .mail {
+    width: 38em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .hero-section {
+    position: relative;
+  }
+  .hero-section::before {
+    content: ' ';
+    position: absolute;
+    margin: 5% auto;
+    z-index: -1;
+    width: 100%;
+    height: 83%;
+    background-color: var(--primary);
+  }
+  .hero-section .container .fashion {
+    width: 30%;
+    position: absolute;
+    top: 1em;
+    left: 6em;
+  }
+  .hero-section .container .mob {
+    display: none;
+  }
+  .hero-section .container .desk {
+    display: block;
+    width: 100%;
+    margin: 8em auto;
+  }
+  .hero-section .container .trends {
+    width: 30%;
+    position: absolute;
+    bottom: -0.5em;
+    right: 10em;
+  }
+  .mailling-section form .mail {
+    width: 45em;
+  }
+  .mailling-section form .mail .text {
+    font-size: 0.8rem;
+  }
+  .mailling-section form .mail .button {
+    font-size: 1 rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .mailling-section form .mail {
+    width: 55em;
+  }
+  .mailling-section form .mail .text {
+    font-size: 1rem;
+  }
+  .mailling-section form .mail .button {
+    font-size: 1.2 rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .mailling-section form .mail {
+    width: 60em;
+  }
+  .mailling-section form .mail .text {
+    font-size: 1.2rem;
+  }
+  .mailling-section form .mail .button {
+    font-size: 1.4 rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .mailling-section form .mail {
+    width: 65em;
+  }
+  .mailling-section form .mail .text {
+    font-size: 1.4rem;
+  }
+  .mailling-section form .mail .button {
+    font-size: 1.6 rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

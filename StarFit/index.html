@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <title>Star Fit</title>
+</head>
+<body>
+    <!-- ------------------------Navbar-------------------------- -->
+    <div class="navbar mob">
+        <a href="#" class="logo"><img src="images/logo.png" alt="Starfit logo"></a>
+        <img src="images/fries.svg" class="open-menu" id="open-menu" alt="opem menu">
+        <nav class="nav" id="nav">
+            <img src="images/exit.svg" class="exit-menu" id="exit-menu" alt="exit menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="icons">
+                    <a href="#"><img src="images/cart.svg" alt="go to cart" class="cart"></a>
+                    <img src="images/search.svg" alt="search" class="search">
+                </div>
+            </ul>
+        </nav>
+    </div>
+    <div class="navbar desk">
+        <a href="#" class="logo"><img src="images/logo.png" alt="Starfit logo"></a>
+        <img src="images/fries.svg" class="open-menu" id="open-menu" alt="opem menu">
+        <nav class="nav" id="nav">
+            <img src="images/exit.svg" class="exit-menu" id="exit-menu" alt="exit menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#"><img src="images/cart.svg" alt="go to cart" class="cart"></a>
+            <img src="images/search.svg" alt="search" class="search">
+        </div>
+    </div>
+    <!-- --------------------------Hero Section-------------------------- -->
+    <section class="hero-section">
+        <div class="container">
+            <img src="images/Fashion.png" alt="Fashion" class="fashion">
+            <img src="images/hero-mob.png" alt="Fashion Style" class="mob">
+            <img src="images/hero-desk.png" alt="Fashion Style" class="desk">
+            <img src="images/Trends.png" alt="Trends" class="trends">
+        </div>
+    </section>
+    <!-- -----------------------Categories Section------------------------ -->
+    <section class="categories-section">
+        <div class="item left one">
+            <img src="images/casuals.jpg" alt="casual fashion" class="picture">
+            <div class="sub-items">
+                <img src="images/casuals.png" alt="Casuals">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, vitae.</p>
+                <div class="button"><a href="#">View more</a></div>
+            </div>
+        </div>
+        <div class="item right two">
+            <img src="images/vintage.jpg" alt="vintage fashion" class="picture">
+            <div class="sub-items">
+                <img src="images/vintage.png" alt="Vintage">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, vitae.</p>
+                <div class="button"><a href="#">View more</a></div>
+            </div>
+        </div>
+        <div class="item left three">
+            <img src="images/chick.jpg" alt="chick fashion" class="picture">
+            <div class="sub-items">
+                <img src="images/chick.png" alt="Chick">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, vitae.</p>
+                <div class="button"><a href="#">View more</a></div>
+            </div>
+        </div>
+        <div class="item right four">
+            <img src="images/exotic.jpg" alt="exotic fashion" class="picture">
+            <div class="sub-items">
+                <img src="images/exotic.png" alt="Exotic">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, vitae.</p>
+                <div class="button"><a href="#">View more</a></div>
+            </div>
+        </div>
+        <div class="categories-btn"><a href="#">View more categories</a></div>
+    </section>
+    <!-- --------------------------Articles Section-------------------------- -->
+    <section class="articles-section">
+        <div class="item">
+            <img src="images/article one.jpg" alt="woman wearing a hat">
+            <div class="left">
+                <p>Lorem ipsum dolor, adipisicing elit.</p>
+                <a href="#">View more</a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/article two.jpg" alt="woman in sunglasses">
+            <div class="left">
+                <p>Lorem ipsum dolor, adipisicing elit.</p>
+                <a href="#">View more</a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/article three.jpg" alt="woman holding oranges">
+            <div class="left">
+                <p>Lorem ipsum dolor, adipisicing elit.</p>
+                <a href="#">View more</a>
+            </div>
+        </div>
+    </section>
+    <!-- --------------------------Mailling Section-------------------------- -->
+    <section class="mailling-section">
+        <img src="images/signup-svg.png" alt="Get all the special offers of StarFit as they come out!!!">
+        <form action="get">
+            <div class="mail">
+                <input type="text" class="text">
+                <input type="button" value="Send!!" class="button">
+            </div>
+        </form>
+    </section>
+    <script>
+        let openMenu= document.querySelector(".open-menu");
+        let exitMenu= document.querySelector(".exit-menu");
+        let nav= document.querySelector(".nav");
+
+        openMenu.addEventListener('click', ()=>{
+            nav.classList.add("menu");
+        });
+
+        exitMenu.addEventListener('click', ()=>{
+            nav.classList.remove("menu");
+        });
+    </script>
+</body>
+</html>
